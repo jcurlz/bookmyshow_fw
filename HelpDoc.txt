@@ -1,0 +1,55 @@
+Order of file setup
+| Step | File                                             | Purpose                                                           |
+| ---- | ------------------------------------------------ | ----------------------------------------------------------------- |
+| 1    | `features/homepage.feature`                      | Define behavior in plain English (BDD)                            |
+| 2    | `features/utils/driver_initialization.py`        | Central WebDriver config (reusable)                               |
+| 3    | `features/pages/base_methods.py`                 | ✅ Create `BaseMethod` class for common browser methods            |
+| 4    | `features/environment.py`                        | Set up/tear down driver + inject shared helpers like `BaseMethod` |
+| 5    | `features/steps/homepage_steps.py`               | Implement steps from feature file using shared `context.base`     |
+| 6    | `features/pages/homepage.py` (optional, modular) | Page-specific logic (elements + actions)                          |
+| 7    | `behave.ini` (optional)                          | Configure tags, logging, etc.                                     |
+
+Shared Driver flow :
+
+┌────────────────────────┐
+│ driver_initialization  │
+│  └── get_driver()      │
+|     return driver      │
+└────────┬───────────────┘
+         ▼
+┌─────────────────────────────┐
+│ environment.py              │
+│  ├── context.driver = get_driver()     (✅ injects driver into contxt to share actoss files)
+│  └── context.base = BaseMethods(context) (✅ injects BaseMethod context to base object)   context.base=> Reference object creation.context
+└────────┬────────────────────┘
+         ▼
+┌──────────────────────────────┐
+│ base_methods.py              │
+│  def __initi__(self, context)
+│  └── self.driver = context.driver   (✅ uses driver)
+└────────┬─────────────────────┘
+         ▼
+┌─────────────────────────────┐
+│ step definitions            │
+│  └── context.base.open_url()  (✅ use utility methods) context.base=>  Class Reference object.class function()
+└─────────────────────────────┘
+
+driver_initialization.py              environment.py                                          base_methods.py
+def initialize_driver()               def before_all(context):
+   return initilaized_driver ============> context.env_driver = initialize_driver()
+                                              └───────────────────────────────────┐             class BaseMethods():    ┌─────────┐──────────┐
+                                           context.base = BaseMethods(context.env_driver) <=┐        def __init__(self, env_driver):         │
+                                                                                            └───────────────────────────└─────────┘          │
+                                                                                                             self.shared_driver = env_driver │
+                                                                                                                 │                  └────────┘
+                                                                                                                 └───────────────────────────────────┐
+                                                                                                             self.wait = WebDriverWait(self.shared_driver, 15)
+
+
+Run cmd in python terminal
+1) Go to project root folder
+
+cd C:\Automation\bookmyshow_fw\.venv\features
+behave --tags=@tag2 --no-skipped
+clear
+
