@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ceacd517-6fb2-4c52-a1e3-ffae780690d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/bookmyshow_fw.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDoc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jcurlz"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jcurlz/bookmyshow_fw.git",
+    "accountId": "81577444-f0b6-4fb3-bee0-112e14cb10c8"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.venv/features/environment.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.venv/features/homepage.feature" root0="SKIP_INSPECTION" />
@@ -68,7 +74,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Automation\bookmyshow_fw" />
+      <recent name="C:\Automation\bookmyshow_fw\features\steps" />
       <recent name="C:\Automation\bookmyshow_fw\features" />
+      <recent name="C:\Automation\bookmyshow_fw\" />
     </key>
   </component>
   <component name="RunManager" selected="Python.base_methods">
@@ -178,7 +186,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/features/steps/homepage_steps.py" />
+      <option name="SCRIPT_NAME" value="C:\Automation\bookmyshow_fw\features\steps\homepage_steps.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -220,7 +228,7 @@
       <workItem from="1747545980934" duration="107000" />
       <workItem from="1747551840166" duration="26502000" />
       <workItem from="1748191424550" duration="1875000" />
-      <workItem from="1748355683967" duration="13069000" />
+      <workItem from="1748355683967" duration="15108000" />
     </task>
     <servers />
   </component>
