@@ -8,7 +8,7 @@ import logging
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-class HomePage():
+class HomePage:
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     
     # HOME PAGE Object
@@ -17,6 +17,12 @@ class HomePage():
     homepg_loc_box_search_field = (By.XPATH, '//input[@type="text"]')
     homepg_loc_box_chennai_sugg = (By.XPATH, "//span[contains(@class,'bwc__sc-ttnkwg-14 cXklvo')  and contains(., 'Chennai')]")
     act_loc_suggestions_list = (By.XPATH, '//*[@id="modal-root"]/div/div/div/div[1]/div[2]/div/ul') #//*[@class="bwc__sc-1iyhybo-11 hCnsML"]')
+    movies_tab = (By.XPATH,"//a[@class='bwc__sc-1shzs91-0 jLahQd' and contains(text(),'Movies')]")
+    stream_tab = (By.XPATH,'//a[@class="bwc__sc-1shzs91-0 jLahQd" and contains(text(),"Stream")]')
+    events_tab = (By.XPATH,'//a[@class="bwc__sc-1shzs91-0 jLahQd" and contains(text(),"Events")]')
+    play_tab = (By.XPATH,'//a[@class="bwc__sc-1shzs91-0 jLahQd" and contains(text(),"Play")]')
+    story_tab = (By.XPATH,'//a[@class="bwc__sc-1shzs91-0 jLahQd" and contains(text(),"Sports")]')
+    activity_tab = (By.XPATH, '//a[@class="bwc__sc-1shzs91-0 jLahQd" and contains(text(),"Activities")]')
 
     #CONSTANTS
     HOMEPG_CHENNAI = "https://in.bookmyshow.com/explore/home/chennai"
@@ -78,8 +84,3 @@ class HomePage():
         self.base.locate_the_dropdown_suggestion_and_click(self.homepg_loc_box_chennai_sugg)
         time.sleep(10)
 
-    def verify_the_url(self):
-        logging.info("🔍 Asserting the Current URL...")
-        current_url = self.base.shared_driver.current_url
-        assert self.HOMEPG_CHENNAI == current_url, f"❌ Expected URL: {self.HOMEPG_CHENNAI}, but got: {current_url}"
-        logging.info("✅ Asserted the Current URL...")

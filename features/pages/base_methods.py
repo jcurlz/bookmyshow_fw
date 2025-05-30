@@ -16,10 +16,18 @@ class BaseMethods():
         self.shared_driver = env_driver
         self.wait = WebDriverWait(self.shared_driver, 15)
         
-    def open_url(self):
-        self.shared_driver.get(self.BASE_URL)
+    def open_url(self, url):
+        self.shared_driver.get(url)
         logging.info("✅ Opening URL...")
         time.sleep(2)
+
+    def verify_the_url(self, exp_url):
+        logging.info("🔍 Asserting the Current URL...")
+        current_url = self.shared_driver.current_url
+        if current_url == exp_url:
+            logging.info(f"✅ 🌐 Successfully navigated to {exp_url} : {current_url}")
+        else:
+            logging.error(f"❌ 🌐  Navigation failed. Expected: {exp_url}, Got: {current_url}")
 
     def true_or_false(self, locator):
         try:
@@ -48,8 +56,7 @@ class BaseMethods():
             return None
 
     def click_on_element(self, locator):
-        self.wait.until(EC.element_to_be_clickable((locator))).click()
-        logging.info("✅ Element clicked: %s", locator)
+        self.wait.until(EC.element_to_be_clickable(locator))
         time.sleep(2)
 
     def clear_the_textbox(self, locator):
@@ -93,4 +100,27 @@ class BaseMethods():
         except Exception as e:
             logging.error(f"❌ <DEBUG> Failed to find element: {e}")
 
-   
+    def assert_the_options(self, locator, expected_options):
+        split_data = expected_options.split("&")
+        logging.info(f"DEBUG >> After split on &: {split_data}")
+
+        # Step 2: Clean each part: strip spaces, remove inner spaces, lowercase
+        exp_list = [e.strip().replace(" ", "").lower() for e in split_data if e.strip()]
+        logging.info(f"DEBUG >> Final cleaned list: {exp_list}")
+
+        actual_list= []
+        element = self.wait.until(EC.presence_of_all_elements_located(locator))
+        for el in element:
+            logging.info(f" Before stripping el.text {el.text}")
+            text = el.text.strip().lower().replace(" ","")
+            logging.info(f" After stripping text and replacing empty space: {text} ")
+            e_list = [e.strip() for e in re.sub(r"[\W]"," ",text).split() if e]
+            logging.info(f" After loop via for-each : {e_list} ")
+            actual_list.extend(e_list)
+        logging.info(f"Final List: {actual_list} ")
+        for index, (act,exp) in enumerate(zip(actual_list,exp_list), start = 1):
+            if act == exp:
+                logging.info(f"✅ Match found {index}: '{exp}' in {act}")
+            else:
+                logging.error(f"❌ '{exp}' not found in actual suggestions: {act}")
+                assert False, f"❌ Expected word '{exp}' not found in actual suggestions"

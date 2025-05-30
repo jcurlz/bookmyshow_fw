@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 @given('I open the BookMyShow homepage')
 def open_homepage(context):
-    context.base.open_url()
+    context.base.open_url(context.base.BASE_URL)
 
 
 @then('I check if location box is open else open it')
@@ -37,5 +37,6 @@ def enter_and_choose_desired_option(context, suggestion):
     
 @then('I land on Book my show chennai page')
 def land_on_book_my_show_chennai_page(context):
-    context.homepg.verify_the_url()
+    context.base.verify_the_url(context.homepg.HOMEPG_CHENNAI)
+    logging.info(f"DEBUG >> location suggestions: {loc_suggestions}")
     

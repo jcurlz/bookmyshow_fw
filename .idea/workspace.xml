@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ceacd517-6fb2-4c52-a1e3-ffae780690d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dummy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/pages/playpage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/playpage.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/steps/playpage_steps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDoc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDoc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/homepage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/homepage.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/pages/base_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/pages/base_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/pages/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/pages/homepage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/homepage_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/homepage_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/utilis/driver_initialization.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/utils/driver_initialization.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,18 +33,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jcurlz"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jcurlz&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jcurlz/bookmyshow_fw.git",
-    "accountId": "81577444-f0b6-4fb3-bee0-112e14cb10c8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jcurlz/bookmyshow_fw.git&quot;,
+    &quot;accountId&quot;: &quot;81577444-f0b6-4fb3-bee0-112e14cb10c8&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.venv/features/environment.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/.venv/features/homepage.feature" root0="SKIP_INSPECTION" />
@@ -51,35 +61,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.base_methods.executor&quot;: &quot;Run&quot;,
-    &quot;Python.browser_setup.executor&quot;: &quot;Run&quot;,
-    &quot;Python.driver_initialization.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.environment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.homepage_steps.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Automation/bookmyshow_fw&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.python.gherkin.gui.PyBDDProjectConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.base_methods.executor": "Run",
+    "Python.browser_setup.executor": "Run",
+    "Python.driver_initialization.executor": "Debug",
+    "Python.dummy.executor": "Debug",
+    "Python.environment.executor": "Run",
+    "Python.homepage_steps.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Automation/bookmyshow_fw",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.python.gherkin.gui.PyBDDProjectConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Automation\bookmyshow_fw\features" />
       <recent name="C:\Automation\bookmyshow_fw" />
       <recent name="C:\Automation\bookmyshow_fw\features\steps" />
-      <recent name="C:\Automation\bookmyshow_fw\features" />
       <recent name="C:\Automation\bookmyshow_fw\" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.base_methods">
+  <component name="RunManager" selected="Python.dummy">
     <configuration name="base_methods" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bookmyshow_fw" />
       <option name="ENV_FILES" value="" />
@@ -103,29 +114,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="browser_setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bookmyshow_fw" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/utils/browser_setup.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="driver_initialization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bookmyshow_fw" />
       <option name="ENV_FILES" value="" />
@@ -141,6 +129,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/features/utilis/driver_initialization.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dummy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bookmyshow_fw" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dummy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dummy" />
         <item itemvalue="Python.base_methods" />
         <item itemvalue="Python.homepage_steps" />
         <item itemvalue="Python.driver_initialization" />
         <item itemvalue="Python.environment" />
-        <item itemvalue="Python.browser_setup" />
       </list>
     </recent_temporary>
   </component>
@@ -229,13 +240,41 @@
       <workItem from="1747551840166" duration="26502000" />
       <workItem from="1748191424550" duration="1875000" />
       <workItem from="1748355683967" duration="15108000" />
+      <workItem from="1748519047167" duration="31867000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dummy.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dummy.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dummy.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dummy.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bookmyshow_fw$dummy.coverage" NAME="dummy Coverage Results" MODIFIED="1748621291000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bookmyshow_fw$base_methods.coverage" NAME="base_methods Coverage Results" MODIFIED="1748192055038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/features/pages" />
     <SUITE FILE_PATH="coverage/bookmyshow_fw$homepage_steps.coverage" NAME="homepage_steps Coverage Results" MODIFIED="1747544728237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/features/steps" />
     <SUITE FILE_PATH="coverage/bookmyshow_fw$driver_initialization.coverage" NAME="driver_initialization Coverage Results" MODIFIED="1747491216382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/features/utilis" />
