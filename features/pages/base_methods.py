@@ -56,11 +56,17 @@ class BaseMethods():
             return None
 
     def click_on_element(self, locator):
-        self.wait.until(EC.element_to_be_clickable(locator))
-        time.sleep(2)
+        try:
+            element = self.wait.until(EC.element_to_be_clickable(locator))
+            logging.info("✅ Element found: {locator}")
+            element.click()
+            logging.info("✅ Element clicked")
+            time.sleep(2)
+        except Exception as e:
+            logging.error("❌ Element not found: {locator} Exception: {e}")
 
     def clear_the_textbox(self, locator):
-        element = self.wait.until(EC.element_to_be_clickable((locator)))        
+        element = self.wait.until(EC.element_to_be_clickable(locator))
         element.clear()
         logging.info("✅ Element cleared: %s", locator)
         time.sleep(2)
@@ -101,6 +107,7 @@ class BaseMethods():
             logging.error(f"❌ <DEBUG> Failed to find element: {e}")
 
     def assert_the_options(self, locator, expected_options):
+        # Step 1: Strip the special charac:
         split_data = expected_options.split("&")
         logging.info(f"DEBUG >> After split on &: {split_data}")
 

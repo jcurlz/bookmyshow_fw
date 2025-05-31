@@ -22,6 +22,7 @@ class PlayPage:
     date_filter_components = (By.XPATH, "//div[contains(@class,'jcjdBd')]")
     date_range_checkbox = (By.XPATH, "//div[@class='sc-1w4xxzu-1 ielWHn']")
     date_range_right_arrow = (By.XPATH, "//div[@class='sc-8opt4a-1 epDIPD'][2]")
+    date_range_month = (By.XPATH, "//div[@class='sc-8opt4a-4 irsvzW']")
     date_range_dec = (By.XPATH, "//div[@class='sc-8opt4a-4 irsvzW' and contains(.,'December 2025'')]")
     lang_filter = (By.XPATH, "//div[contains(@class,'dksMXb') and text()='Language']")
     lang_filter_components = (By.XPATH, "//div[div[text()='Language']]/following-sibling::div[contains(@class,'jcjdBd')]")
@@ -40,8 +41,7 @@ class PlayPage:
     def element_click(self, locator):
         element = self.base.check_element_presence(locator)
         if element.is_enabled():
-            self.base.click_on_element(locator)
-            logging.info(f"DEBUG >> Date Filter enabled by default")
+           logging.info(f"DEBUG >> Date Filter enabled by default")
         if not element.is_enabled():
             self.base.click_on_element(locator)
             logging.info(f"DEBUG >> Date Filter enabled by click")
@@ -50,16 +50,23 @@ class PlayPage:
     def verify_the_filter_components(self, locator, exp_options):
         self.base.get_dropdown_list(locator, exp_options)
 
-    def click_right_arrow(self, expected_text):
+    def click_right_arrow(self, month_year):
         logging.info(f"DEBUG >> date_range_dec locator: {self.date_range_dec}")
         while True:
-            element = self.wait.until(EC.visibility_of_element_located(self.date_range_dec))
-            current_text = element.text.strip()
+            current = self.wait.until(EC.visibility_of_element_located(self.date_range_month))
+            current_text = current.text.strip()
             logging.info(f"DEBUG >> Current text: {current_text}")
+            attempt = 1
+            logging.info(f"Attempt : {attempt}")
+            try:
+                if current_text == month_year:
+                    logging.info(f"DEBUG >> Match found: {current_text} == {month_year}")
+                    break
 
-            if current_text == expected_text:
-                logging.info(f"DEBUG >> Match found: {current_text} == {expected_text}")
-                break
+                attempt+=1
+                logging.info("DEBUG >> Clicking right arrow to find expected text...")
+                self.wait.until(EC.element_to_be_clickable(self.date_range_right_arrow)).click()
+            except Exception as e:
+                logging.info(f"DEBUG >> Exception: {e}")
 
-            logging.info("DEBUG >> Clicking right arrow to find expected text...")
-            self.wait.until(EC.element_to_be_clickable(self.date_range_right_arrow)).click()
+

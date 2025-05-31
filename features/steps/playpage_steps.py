@@ -34,7 +34,8 @@ def click_on_the_date_range(context):
     context.base.click_on_element(context.playpg.date_range_checkbox)
     logging.info(f"DEBUG >> Options: Date range checked")
 
-@then('I click the right arrow till I reach "{month}"')
-def click_the_right_arrow(context, month):
-    context.playpg.click_right_arrow(month)
+@then('I click the right arrow till I reach "{month_year}"')
+def click_the_right_arrow(context, month_year):
+    logging.info(f"DEBUG >> Month Year to search: {month_year}")
+    context.playpg.click_right_arrow(month_year)
     time.sleep(5)
