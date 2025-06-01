@@ -1,7 +1,9 @@
 #base_methods.py
 import re
 import time
-from selenium.webdriver.common.by import By
+from argparse import Action
+
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -15,11 +17,12 @@ class BaseMethods():
     def __init__(self, env_driver):
         self.shared_driver = env_driver
         self.wait = WebDriverWait(self.shared_driver, 15)
-        
+        self.action = ActionChains(self.shared_driver)
+
     def open_url(self, url):
         self.shared_driver.get(url)
         logging.info("✅ Opening URL...")
-        time.sleep(2)
+        time.sleep(0.5)
 
     def verify_the_url(self, exp_url):
         logging.info("🔍 Asserting the Current URL...")
@@ -28,6 +31,9 @@ class BaseMethods():
             logging.info(f"✅ 🌐 Successfully navigated to {exp_url} : {current_url}")
         else:
             logging.error(f"❌ 🌐  Navigation failed. Expected: {exp_url}, Got: {current_url}")
+
+    def return_the_url(self):
+        logging.info("🔍 Asserting the Current URL...")
 
     def true_or_false(self, locator):
         try:
@@ -58,12 +64,14 @@ class BaseMethods():
     def click_on_element(self, locator):
         try:
             element = self.wait.until(EC.element_to_be_clickable(locator))
-            logging.info("✅ Element found: {locator}")
+            self.action.move_to_element(element).perform()
+            time.sleep(1.5)
             element.click()
-            logging.info("✅ Element clicked")
-            time.sleep(2)
+            logging.info("✅ Element found & clicked")
+            return self.shared_driver.current_url
         except Exception as e:
-            logging.error("❌ Element not found: {locator} Exception: {e}")
+            logging.error(f"❌ Element not found: {locator} Exception: {e}")
+            return None
 
     def clear_the_textbox(self, locator):
         element = self.wait.until(EC.element_to_be_clickable(locator))
@@ -131,3 +139,22 @@ class BaseMethods():
             else:
                 logging.error(f"❌ '{exp}' not found in actual suggestions: {act}")
                 assert False, f"❌ Expected word '{exp}' not found in actual suggestions"
+
+
+    def assert_the_text(self, locator, expected_text):
+        expected_text = expected_text.strip().lower().replace('"', '')
+        expected_text = re.sub(r"[\s'-]","",expected_text).split()
+        logging.info(f"Date Range Expected : {expected_text}")
+        actual_text = None
+        try:
+            time.sleep(1)
+            element = self.wait.until(EC.presence_of_element_located(locator))
+            actual_text = element.text.strip().lower()
+            actual_text = [e.strip() for e in re.sub(r"[\s'-]", "",actual_text).split() if e]
+            logging.info(f"Actual Date Range {actual_text}")
+        except Exception as e:
+            logging.error(f"<UNK> <DEBUG> Failed to find element: {e}")
+        logging.info(f"{actual_text} == {expected_text}")
+        assert actual_text == expected_text, f"Expected {expected_text} but got {actual_text}"
+        time.sleep(2)
+

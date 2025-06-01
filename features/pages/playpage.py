@@ -2,10 +2,8 @@
 import time
 
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import wait
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 import logging
 
 
@@ -23,8 +21,11 @@ class PlayPage:
     date_range_checkbox = (By.XPATH, "//div[@class='sc-1w4xxzu-1 ielWHn']")
     date_range_right_arrow = (By.XPATH, "//div[@class='sc-8opt4a-1 epDIPD'][2]")
     date_range_month = (By.XPATH, "//div[@class='sc-8opt4a-4 irsvzW']")
-    date_range_dec = (By.XPATH, "//div[@class='sc-8opt4a-4 irsvzW' and contains(.,'December 2025'')]")
-    lang_filter = (By.XPATH, "//div[contains(@class,'dksMXb') and text()='Language']")
+    date_range_dec = (By.XPATH, "//div[@class='sc-8opt4a-4 irsvzW' and contains(.,'December 2025')]")
+    date_range_apply_button = (By.XPATH, "//div[contains(@class,'sc-7o7nez-0 jOzSQH') and text()='Apply']")
+
+    date_range_confirmation = (By.CSS_SELECTOR, ".sc-1w4xxzu-2")
+    lang_filter = (By.XPATH, "//div[contains(@class,'dksMXb') and text()='Language' and text()='English'] ")
     lang_filter_components = (By.XPATH, "//div[div[text()='Language']]/following-sibling::div[contains(@class,'jcjdBd')]")
 
 
@@ -51,7 +52,7 @@ class PlayPage:
         self.base.get_dropdown_list(locator, exp_options)
 
     def click_right_arrow(self, month_year):
-        logging.info(f"DEBUG >> date_range_dec locator: {self.date_range_dec}")
+        logging.info(f"DEBUG >> Date_range_dec Right arrow click scenario....")
         while True:
             current = self.wait.until(EC.visibility_of_element_located(self.date_range_month))
             current_text = current.text.strip()
@@ -70,3 +71,18 @@ class PlayPage:
                 logging.info(f"DEBUG >> Exception: {e}")
 
 
+    def click_date(self, day, month):
+        logging.info(f"DEBUG >> Click date {day} {month}")
+        try:
+            day_locator = self.wait.until(EC.presence_of_element_located((By.XPATH, f"//div[text()='{day}' and contains(@title,'{month}')]")))
+            self.wait.until(EC.element_to_be_clickable(day_locator))
+            logging.info(f"✅ Element found for {day}, {month}")
+            self.base.click_on_element(day_locator)
+        except Exception as e:
+            logging.info(f"DEBUG >> Exception in click_date: {e}")
+        time.sleep(2)
+
+
+    def assert_date_confirmation(self, expected_date_range):
+        self.base.assert_the_text(self.date_range_confirmation, expected_date_range)
+        logging.info(f"DEBUG >> Date range assertion done")

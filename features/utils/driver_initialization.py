@@ -1,10 +1,10 @@
 #driver_initialization.py
 import undetected_chromedriver as uc
-from selenium import webdriver
+
 
 def initialize_driver():
     option = uc.ChromeOptions()
-    # options.headless = True
+    #option.headless = True
     option.add_argument("--incognito")
     option.add_argument("--no-sandbox")
     option.add_argument("--disable-gpu")
