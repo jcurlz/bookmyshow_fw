@@ -1,5 +1,6 @@
 # environment.py
 from features.pages.base_methods import BaseMethods
+from features.pages.eventspage import EventsPage
 from features.pages.homepage import HomePage
 from features.pages.playpage import PlayPage
 from features.utils.driver_initialization import initialize_driver
@@ -13,6 +14,7 @@ def before_all(context):
     context.base = BaseMethods(context.env_driver) #inject drivers state in BaseMethod and create a reference object
     context.homepg = HomePage(context.base)
     context.playpg = PlayPage(context.base, context.homepg)
+    context.eventpg = EventsPage(context.base)
     os.makedirs("screenshots", exist_ok=True)
 
 def before_scenario(context, scenario):

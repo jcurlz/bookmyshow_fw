@@ -5,16 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ceacd517-6fb2-4c52-a1e3-ffae780690d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/features/run_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/eventspage.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/pages/eventspage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/steps/eventspage_steps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDoc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDoc.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dummy.py" beforeDir="false" afterPath="$PROJECT_DIR$/dummy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/environment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/pages/base_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/pages/base_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/pages/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/pages/homepage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/pages/playpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/pages/playpage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/playpage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/playpage.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/run_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/run_tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/homepage_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/homepage_steps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/steps/playpage_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/playpage_steps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/utils/driver_initialization.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/utils/driver_initialization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/Status.failed.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/Status.failed.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Gherkin feature file" />
         <option value="Python Script" />
+        <option value="Gherkin feature file" />
       </list>
     </option>
   </component>
@@ -60,29 +65,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.base_methods.executor": "Run",
-    "Python.browser_setup.executor": "Run",
-    "Python.driver_initialization.executor": "Debug",
-    "Python.dummy.executor": "Debug",
-    "Python.environment.executor": "Run",
-    "Python.homepage_steps.executor": "Run",
-    "Python.playpage_steps.executor": "Run",
-    "Python.run_tests.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "tag3",
-    "last_opened_file_path": "C:/Automation/bookmyshow_fw",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.python.gherkin.gui.PyBDDProjectConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Behave.eventspage.feature:To verify the Price tab with price range 0 - 500 and check for count of no: championships, competitions and show.executor&quot;: &quot;Run&quot;,
+    &quot;Python.base_methods.executor&quot;: &quot;Run&quot;,
+    &quot;Python.browser_setup.executor&quot;: &quot;Run&quot;,
+    &quot;Python.driver_initialization.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.dummy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.environment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homepage_steps.executor&quot;: &quot;Run&quot;,
+    &quot;Python.playpage_steps.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_tests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;events__page&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Automation/bookmyshow_fw&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.python.gherkin.gui.PyBDDProjectConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Automation\bookmyshow_fw\features" />
@@ -91,7 +97,23 @@
       <recent name="C:\Automation\bookmyshow_fw\" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_tests">
+  <component name="RunManager" selected="Python.dummy">
+    <configuration name="eventspage.feature:To verify the Price tab with price range 0 - 500 and check for count of no: championships, competitions and show" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
+      <module name="bookmyshow_fw" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <WHAT_TO_RUN WHAT_TO_RUN="$PROJECT_DIR$/features/eventspage.feature" />
+      <SCENRAIO_NAMES SCENRAIO_NAMES="To verify the Price tab with price range 0 - 500 and check for count of no: championships, competitions and show" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="base_methods" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bookmyshow_fw" />
       <option name="ENV_FILES" value="" />
@@ -130,29 +152,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dummy.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="homepage_steps" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bookmyshow_fw" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/features/steps" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Automation\bookmyshow_fw\features\steps\homepage_steps.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -209,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_tests" />
         <item itemvalue="Python.dummy" />
+        <item itemvalue="Behave.eventspage.feature:To verify the Price tab with price range 0 - 500 and check for count of no: championships, competitions and show" />
+        <item itemvalue="Python.run_tests" />
         <item itemvalue="Python.playpage_steps" />
         <item itemvalue="Python.base_methods" />
-        <item itemvalue="Python.homepage_steps" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +245,10 @@
       <workItem from="1748657149384" duration="2942000" />
       <workItem from="1748671940859" duration="20963000" />
       <workItem from="1748695007031" duration="2318000" />
-      <workItem from="1748697376995" duration="11603000" />
+      <workItem from="1748697376995" duration="11732000" />
+      <workItem from="1748776041871" duration="3190000" />
+      <workItem from="1748787734800" duration="24856000" />
+      <workItem from="1748862420741" duration="2687000" />
     </task>
     <servers />
   </component>
@@ -255,28 +257,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dummy.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dummy.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dummy.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dummy.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -287,8 +267,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/bookmyshow_fw$run_tests.coverage" NAME="run_tests Coverage Results" MODIFIED="1748708093538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/features" />
-    <SUITE FILE_PATH="coverage/bookmyshow_fw$dummy.coverage" NAME="dummy Coverage Results" MODIFIED="1748704160928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bookmyshow_fw$run_tests.coverage" NAME="run_tests Coverage Results" MODIFIED="1748776546616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/features" />
+    <SUITE FILE_PATH="coverage/bookmyshow_fw$eventspage_feature_To_verify_the_Price_tab_with_price_range_0___500_and_check_for_count_of_no__championships__competitions_and_show.coverage" NAME="eventspage.feature:To verify the Price tab with price range 0 - 500 and check for count of no: championships, competitions and show Coverage Results" MODIFIED="1748790374381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/bookmyshow_fw$dummy.coverage" NAME="dummy Coverage Results" MODIFIED="1748862008469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bookmyshow_fw$base_methods.coverage" NAME="base_methods Coverage Results" MODIFIED="1748192055038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/features/pages" />
     <SUITE FILE_PATH="coverage/bookmyshow_fw$homepage_steps.coverage" NAME="homepage_steps Coverage Results" MODIFIED="1747544728237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/features/steps" />
     <SUITE FILE_PATH="coverage/bookmyshow_fw$playpage_steps.coverage" NAME="playpage_steps Coverage Results" MODIFIED="1748658695083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/features/steps" />

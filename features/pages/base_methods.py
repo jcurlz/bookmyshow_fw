@@ -45,12 +45,17 @@ class BaseMethods():
             else:
                 logging.error("❌ Element is present but not visible")
                 return False
-        except TimeoutException:
-            logging.error("❌ Timeout: Element not found")
-            return False
         except Exception as e:
             logging.error("❌ Unexpected error checking visibility: {locator}, Exception: {e}")
             return False
+
+    def element_enabled_or_not(self, locator):
+        element = self.check_element_presence(locator)
+        if element.is_enabled():
+            logging.info(f"DEBUG >> Elements Filter enabled by default")
+        if not element.is_enabled():
+            self.click_on_element(locator)
+            logging.info(f"DEBUG >> Elements Filter enabled by click")
 
     def check_element_presence(self, locator):
         try:
@@ -64,10 +69,20 @@ class BaseMethods():
     def click_on_element(self, locator):
         try:
             element = self.wait.until(EC.element_to_be_clickable(locator))
-            self.action.move_to_element(element).perform()
+            self.action.move_to_element(element).click().perform()
             time.sleep(1.5)
-            element.click()
             logging.info("✅ Element found & clicked")
+            return self.shared_driver.current_url
+        except Exception as e:
+            logging.error(f"❌ Element not found: {locator} Exception: {e}")
+            return None
+
+    def click_on_element_twice(self, locator):
+        try:
+            element = self.wait.until(EC.element_to_be_clickable(locator))
+            self.action.move_to_element(element).double_click().perform()
+            time.sleep(1.5)
+            logging.info("✅ Element found & clicked twice")
             return self.shared_driver.current_url
         except Exception as e:
             logging.error(f"❌ Element not found: {locator} Exception: {e}")
@@ -118,7 +133,6 @@ class BaseMethods():
         # Step 1: Strip the special charac:
         split_data = expected_options.split("&")
         logging.info(f"DEBUG >> After split on &: {split_data}")
-
         # Step 2: Clean each part: strip spaces, remove inner spaces, lowercase
         exp_list = [e.strip().replace(" ", "").lower() for e in split_data if e.strip()]
         logging.info(f"DEBUG >> Final cleaned list: {exp_list}")
@@ -129,7 +143,7 @@ class BaseMethods():
             logging.info(f" Before stripping el.text {el.text}")
             text = el.text.strip().lower().replace(" ","")
             logging.info(f" After stripping text and replacing empty space: {text} ")
-            e_list = [e.strip() for e in re.sub(r"[\W]"," ",text).split() if e]
+            e_list = [e.strip() for e in re.sub(r"[^\w\-]"," ",text).split() if e]
             logging.info(f" After loop via for-each : {e_list} ")
             actual_list.extend(e_list)
         logging.info(f"Final List: {actual_list} ")
@@ -157,4 +171,3 @@ class BaseMethods():
         logging.info(f"{actual_text} == {expected_text}")
         assert actual_text == expected_text, f"Expected {expected_text} but got {actual_text}"
         time.sleep(2)
-

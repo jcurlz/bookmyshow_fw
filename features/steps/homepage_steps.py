@@ -13,12 +13,19 @@ def open_homepage(context):
 
 @then('I check if location box is open else open it')
 def check_location_box(context):
+    """
     loc_box_presence = context.base.true_or_false(context.homepg.homepg_loc_box_search_field)
     if loc_box_presence:
         logging.info('✅ Location box is open and visible')
     else:
         context.homepg.click_on_location_box(context.homepg_loc_box_search_field)
         logging.info('Location box clicked')
+    """
+    element = context.base.check_element_presence(context.homepg.homepg_loc_box_search_field)
+    if element.is_enabled():
+        logging.info(f"DEBUG >> Location box is default")
+    else:
+        logging.info(f"DEBUG >> Price Filter enabled by click")
 
 
 @then('I enter "{locations}" in the search and assert the "{loc_suggestions}"')
@@ -38,5 +45,5 @@ def enter_and_choose_desired_option(context, suggestion):
 @then('I land on Book my show chennai page')
 def land_on_book_my_show_chennai_page(context):
     context.base.verify_the_url(context.homepg.HOMEPG_CHENNAI)
-    logging.info(f"DEBUG >> location suggestions: {loc_suggestions}")
+    logging.info(f"DEBUG >> I land on Chennai page")
     

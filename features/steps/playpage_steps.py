@@ -8,20 +8,17 @@ from behave import *
 @given('I hit Chennai URL and click on Play tab')
 def open_chennaipage_and_click_playtab(context):
      context.base.open_url(context.playpg.CHENNAI_URL)
-     context.playpg.element_click(context.homepg.play_tab)
+     context.base.element_enabled_or_not(context.homepg.play_tab)
      time.sleep(0.5)
-
 
 @given('I verify the play url')
 def verify_the_play_url(context):
     context.base.open_url(context.playpg.PLAYS_URL)
     logging.info(f"DEBUG >> Play URL Verification")
 
-
 @when('I click on Date option')
 def click_on_date_option(context):
-    context.playpg.element_click(context.playpg.date_filter)
-
+    context.base.element_enabled_or_not(context.playpg.date_filter)
 
 @when('I verify the "{options}"')
 def verify_the_options(context, options):

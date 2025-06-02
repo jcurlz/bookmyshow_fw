@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 def run_behave_tests_with_allure():
     behave_command = [
         "behave",
-        "--tags=tag1",
+        "--tags=tag3",
         "--no-skipped",
         "-f", "allure_behave.formatter:AllureFormatter",
         "-o", "allure-results"

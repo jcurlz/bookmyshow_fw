@@ -8,8 +8,7 @@ import logging
 
 
 class PlayPage:
-
-    logging.basicConfig(filename='playpage.log', level=logging.DEBUG)
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
     # CONSTANTS
     CHENNAI_URL ="https://in.bookmyshow.com/explore/home/chennai"
@@ -39,13 +38,13 @@ class PlayPage:
         self.base.op(locator)
 
 
-    def element_click(self, locator):
+    def element_enabled_or_not(self, locator):
         element = self.base.check_element_presence(locator)
         if element.is_enabled():
-           logging.info(f"DEBUG >> Date Filter enabled by default")
+           logging.info(f"DEBUG >> Element enabled by default")
         if not element.is_enabled():
             self.base.click_on_element(locator)
-            logging.info(f"DEBUG >> Date Filter enabled by click")
+            logging.info(f"DEBUG >> Element enabled by click")
 
 
     def verify_the_filter_components(self, locator, exp_options):
@@ -86,3 +85,5 @@ class PlayPage:
     def assert_date_confirmation(self, expected_date_range):
         self.base.assert_the_text(self.date_range_confirmation, expected_date_range)
         logging.info(f"DEBUG >> Date range assertion done")
+
+

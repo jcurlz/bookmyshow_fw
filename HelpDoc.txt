@@ -51,6 +51,8 @@ Run cmd in python terminal
 
 cd C:\Automation\bookmyshow_fw\features behave -t @tag2 --no-skipped
 
-behave --tags=tag2 --no-skipped
+behave --tags=tag4 --no-skipped
 clear
 
+How to generate snippets?
+behave --tags=tag4 --no-skipped --dry-run --no-capture

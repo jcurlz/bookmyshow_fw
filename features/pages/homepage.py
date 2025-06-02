@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 class HomePage:
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     
-    # HOME PAGE Object
+    # HOME PAGE Locators
     logo_ele = (By.CLASS_NAME, 'gNQLww')
     homepg_loc_ele = (By.ID, 'common-header-region')
     homepg_loc_box_search_field = (By.XPATH, '//input[@type="text"]')

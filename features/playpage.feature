@@ -1,4 +1,4 @@
-# @playpage
+@playpage
 Feature: To test Play tab in Bookmyshow
 
   @tag3 @DateFilter
